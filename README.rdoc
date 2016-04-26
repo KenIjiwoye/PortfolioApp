@@ -1,7 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+New development of portfolio site using Rails 4.
 
 Things you may want to cover:
 
