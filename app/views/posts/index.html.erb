@@ -15,7 +15,7 @@
 <div id="post-content-show">
 	<div class="container">
 	<% @posts.each do |p| %>
-	  <h2><%= link_to p.title, @post %></h2>
+	  <h2><%= link_to p.title, post_path(p[:id]) %></h2>
 	  <p><%= p.body %></p>
 	<hr>
 		<div class="well" id="post-links">
