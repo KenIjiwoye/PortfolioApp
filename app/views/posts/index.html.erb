@@ -1,3 +1,9 @@
+<style>
+	#post-content-show a {
+		color: #333;
+	}
+</style>
+
 <div id="hero-bg">
 	<div id="hero-back"></div>
 	<div id="hero-front">
@@ -9,7 +15,7 @@
 <div id="post-content-show">
 	<div class="container">
 	<% @posts.each do |p| %>
-	  <h2><%= p.title %></h2>
+	  <h2><%= link_to p.title, @post %></h2>
 	  <p><%= p.body %></p>
 	<hr>
 		<div class="well" id="post-links">
