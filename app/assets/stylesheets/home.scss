@@ -11,7 +11,7 @@ h1,h2,h3,h4,h5,p {
 }
 
 #main-hero {
-	background-image: url(../img/main-hero.jpeg);
+	background-image: url(../assets/main-hero.jpeg);
 	background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -41,6 +41,7 @@ h1,h2,h3,h4,h5,p {
 	padding-top: 25px;
 	padding-bottom: 25px;
 	text-align: center;
+	position: center;
 	h1 {
 		color: #333;
 		font-size: 3.5rem;
