@@ -5,6 +5,7 @@
   <title>Portfolio dev</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -15,6 +16,23 @@
 <%= flash_messages %>
 
 <%= yield %>
+
+
+	<div id="social-links">
+    <div class="container">
+      <div class="col-xs-3"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+      <div class="col-xs-3"><i class="fa fa-github" aria-hidden="true"></i></div>
+      <div class="col-xs-3"><i class="fa fa-comments" aria-hidden="true"></i></div>
+      <div class="col-xs-3"><i class="fa fa-mobile" aria-hidden="true"></i></div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <div class="col-md-6"><p>"Venture without fear, live life with no regrets."</p></div>
+      <div class="col-md-6"><p>2015 Copyright. kenijiwoye.com</p></div>
+    </div>
+  </div>
+
 
 </body>
 </html>
