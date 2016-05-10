@@ -16,13 +16,17 @@
 	<div class="container">
 	<% @posts.each do |p| %>
 	  <h2><%= link_to p.title, post_path(p[:id]) %></h2>
-	  <p><%= raw p.body %></p>
+	  <p><%= truncate(p.body, length: 250) %></p>
+	  <br>
+	  <%= link_to 'Read More', post_path(p[:id]), class: "btn btn-info" %>
 	<hr>
+	<% if admin_signed_in? %>
 		<div data-no-turbolink class="well" id="post-links">
 			<%= link_to 'Show Post', post_path(p[:id]), class: "btn btn-primary" %>
 			<%= link_to 'Edit Post', edit_post_path(p[:id]), class: "btn btn-info" %>
 			<%= link_to 'Delete', p, class: "btn btn-danger", method: :delete, data: {confirm: 'Are you sure?'} %>
 		</div>
+	<% end %>
 	<hr>
 	<% end %>
 	</div>
@@ -30,6 +34,3 @@
 
 <br>
 
-<div data-no-turbolink>
-<%= link_to 'New Post', new_post_path %>
-</div>
