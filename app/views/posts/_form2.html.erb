@@ -1,6 +1,8 @@
+<div data-no-turbolink>
 <%= simple_form_for @post do |f| %>
 	<%= f.input :title %>
-	<%= f.input :body %>
+	<%= f.input :body, :as => :ckeditor, :input_html => { :ckeditor => {:toolbar => 'Full'} } %>
 	<hr>
 	<%= f.button :submit %>
 <% end %>
+</div>
