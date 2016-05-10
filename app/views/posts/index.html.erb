@@ -16,7 +16,7 @@
 	<div class="container">
 	<% @posts.each do |p| %>
 	  <h2><%= link_to p.title, post_path(p[:id]) %></h2>
-	  <p><%= truncate(p.body, length: 250) %></p>
+	  <p><%= raw p.body %></p>
 	  <br>
 	  <%= link_to 'Read More', post_path(p[:id]), class: "btn btn-info" %>
 	<hr>
